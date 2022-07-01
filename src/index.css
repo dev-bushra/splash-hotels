@@ -1,0 +1,18 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+*, html, body, a, p, input, span, ul, li, br, nav {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.letter-spacing {
+  letter-spacing: 10px;
+}
+
+
