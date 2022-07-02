@@ -15,4 +15,31 @@ a {
   letter-spacing: 10px;
 }
 
+.tag {
+  padding: 5px 10px;
+  font-size: small;
+}
+
+.tabs {
+  color: white;
+  background-color: #212529;
+}
+
+.tabs li {
+  width: 50%;
+  text-align: center;
+}
+
+.tabs a {
+  color: white;
+  background-color: #212529;
+}
+
+.tabs a:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #212529;
+}
+
+
 

@@ -1,18 +1,18 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import SpecialOffers from './components/SpecialOffers';
-import HotelsList from './components/HotelsList';
-import Footer from './components/Footer';
+import Home from './components/Home';
+import HotelsDetails from './components/HotelsDetails';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App bg-dark text-light">
-      <Navbar />
-      <Header />
-      <SpecialOffers />
-      <HotelsList />
-      <Footer />
+  <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<HotelsDetails />} />
+      </Routes>
+  </Router>
     </div>
   );
 }
