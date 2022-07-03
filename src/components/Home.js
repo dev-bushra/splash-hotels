@@ -6,6 +6,7 @@ import SpecialOffers from './SpecialOffers';
 import HotelsList from './HotelsList';
 
 function Home() {
+
   return (
     <div className="App bg-dark text-light">
       <Navbar />

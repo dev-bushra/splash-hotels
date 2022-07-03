@@ -7,12 +7,19 @@ import { fillStar, halfFillStar, Star, map } from './svg'
 import { useState } from "react";
 
 const HotelsDetails = () => {
-    const [tab,setTab] = useState(true);
+    const [rate, setRate] = useState('(5.2)');
+    const [isGallary, setIsGallary] = useState(true);
+    const [isDetails, setIsDetails] = useState(false);
 
-    const toggleTab = () => {
-        setTab(!tab);
+    const toggleGallary = () => {
+        setIsGallary(true);
+        setIsDetails(false);
     }
-    const rate = '(5.2)';
+    const toggleDetails = () => {
+        setIsDetails(true);
+        setIsGallary(false);
+    }
+
     return (
         <div class="bg-dark text-light">
             <Navbar />
@@ -48,18 +55,19 @@ const HotelsDetails = () => {
             <div class="m-5 my-5">
             <ul class="nav nav-tabs tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" onClick={toggleTab}>Gallary</a>
+                    <a className={isGallary ? "nav-link active" : "nav-link"}  aria-current="page" onClick={toggleGallary}>Gallary</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onClick={toggleTab}>Details</a>
+                    <a className={isDetails ? "nav-link active" : "nav-link"} onClick={toggleDetails}>Details</a>
                 </li>
             </ul>
             </div>
 
-            { tab ? <Gallary /> : <Details />}
+            { isGallary && <Gallary /> } 
+            { isDetails && <Details /> } 
 
             <div class="mt-5"><hr /></div>
-            
+
             <Footer />
         </div>
     );
